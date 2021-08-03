@@ -1,38 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap");
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    margin: 0;
+    overflow-y: overlay;
+    font-family: "Poppins";
+    -webkit-font-smoothing: antialiased;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+    display: block;
+    scroll-behavior: smooth;
   }
+
+.home_container{
+    background-image: url(./img/img2.jpeg);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.header_container {
+    display: flex;
+    justify-content: center;
+    height: 140px;
+    color: white;
   }
-  to {
-    transform: rotate(360deg);
+  .header_parent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 70%;
+    color: white;
   }
+  .header_logo {
+    font-size: 50px;
+    font-weight: 800;
+    font-family: "Poppins";
+    color: white;
+  }
+  .header_options {
+    display: flex;
+    align-items: center;
+  }
+  .header_option {
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  .header_option_separator {
+    margin: 0 50px 0 0;
+  }
+  
+
+
+
+
+.portfolio_footer{
+    height: 17.8%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
 }
+
+.profile_picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 0 0 white;
+    border-radius: 50%;
+    height: 380px;
+    width: 380px;
+    margin: 0 0 0 100px;
+  }
+  .profile_picture_background {
+    height: 92%;
+    width: 92%;
+    border-radius: 50%;
+    background-image: url(./img/shubham3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position: 20%; */
+  }
+
+.footer_parent{
+    width: 100%;
+    height: 100%;
+    max-width: 1920px;
+}
+img {
+    max-width: 100%;
+    height: 150px;
+    vertical-align: middle;
+    border-style: none;
+  }
