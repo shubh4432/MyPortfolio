@@ -86,7 +86,7 @@ const FirstContainer = () => {
               <h2> Knack of building applications with front and back end operations.
               </h2>
               <StyledButton>
-              <button style={{backgroundColor: "orange"}}> Hire Me</button>
+              <button > Hire Me</button>
 
               <button> Resume</button>
               </StyledButton>

@@ -24,9 +24,9 @@ const AboutMe = () => {
                     <li>Building REST API</li>
                     <li>Managing database</li>
                     <StyledButton>
-              <button style={{backgroundColor: "orange"}}> Hire Me</button>
+              <button style={{backgroundColor: "black"}}> Hire Me</button>
 
-              <button> Resume</button>
+              <button style={{backgroundColor: "red"}}> Resume</button>
               </StyledButton>
                 </AboutMeDetails>
               </AboutMeCard>
@@ -86,6 +86,16 @@ display: flex;
 flex-direction: column;
 justify-content: space-between;
 padding: 80px;
+p {
+    color: black;
+}
+
+li {
+    list-style-type: circle ;
+    
+}
+
+
 
 `
 

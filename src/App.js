@@ -2,7 +2,8 @@ import React from "react";
 import "./App.css"
 import FirstContainer from "./components/FirstContainer";
 import GlobalStyle from "./components/GlobalStyles";
-import AboutMe from "./components/AboutMe"
+import AboutMe from "./components/AboutMe";
+import Resume from "./components/Resume";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <GlobalStyle />
       <FirstContainer />
       <AboutMe />
+      <Resume />
     </div>
   );
 }

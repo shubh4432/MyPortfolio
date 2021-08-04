@@ -35,7 +35,7 @@ button {
     transition: all 0.5s ease;
     font-family: 'Inter', sa-serif;
     &:hover{
-        background-color: #23d997;
+        background-color: orange;
         color: white
     }
     
