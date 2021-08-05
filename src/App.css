@@ -17,7 +17,9 @@
 .home_container{
     background-image: url(./img/img2.jpeg);
 }
-
+.contact_img {
+  background-image: url(./img/message.png);
+}
 .header_container {
     display: flex;
     justify-content: center;

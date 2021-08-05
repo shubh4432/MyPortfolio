@@ -23,8 +23,8 @@ const Resume = () => {
             value={{ color: 'white', size: '25px' }}
           >
           <GiBookshelf />  
-          <FaLaptopCode/>
-          <AiOutlineProject/>
+          <FaLaptopCode />
+          <AiOutlineProject />
           <FaChess />
             </IconContext.Provider>
                 
@@ -40,7 +40,7 @@ const Resume = () => {
             
            </Navbar>
             <Details>
-            
+               
             </Details>
             </ResumeCard>
           </div>
