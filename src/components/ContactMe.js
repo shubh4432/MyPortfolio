@@ -73,10 +73,11 @@ margin-bottom: 2rem;
         color: #1f2235;
         font-size:32px;
         font-family: "Poppins";
-        font-weight: 800;
+        font-weight: 600;
     }
     p{
         margin-left: 1.8rem;
+        letter-spacing: 0.08rem;
     }
 
 `
@@ -98,7 +99,7 @@ display: flex;
 flex-direction: row;
 height: 460px;
 width: 1050px;
-background-color: black;
+background-color: #1f2235;
 border-radius: 15px;
 box-shadow: 0 0 20px 5px black;
 z-index:2;
@@ -126,7 +127,7 @@ const ContactMeForm = styled.div`
 margin-top: 2.5rem;
 height: 90%;
 border-radius: 15px;
-background-color: #e0d9d9;
+background-color: #dfdede;
 width: 90%;
 display: flex;
 flex-direction: column;
@@ -141,16 +142,33 @@ label{
 input {
     margin-bottom: 1rem;
     margin-left: 1rem;
+    border: 2px solid ;
     width: 80%;
-    border-radius: 5px;
+    border-radius: 6px;
     height: 33px;
+    font-family: inherit;
+    outline: black;
+    &:hover {
+        border-color: orange;
+    }
+    &:focus {
+        border-color: red;
+    }
 }
 textarea {
     width: 80%;
+    border: 2px solid ;
     margin-left: 1rem;
     border-radius: 5px ;
     outline: black;
-    height: 5px
+    height: 50px;
+    font-family: inherit;
+    &:hover {
+        border-color: orange;
+    }
+    &:focus {
+        border-color: red;
+    }
 }
 button {
     margin-top: 2.5rem ;
