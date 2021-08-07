@@ -112,6 +112,7 @@ span {
 
 
 const ContactMeBox = styled.div` 
+margin-top: 5rem;
 display: flex;
 flex-direction: row;
 height: 460px;

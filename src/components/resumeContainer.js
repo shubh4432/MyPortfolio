@@ -117,7 +117,7 @@ function ResumeContainer() {
                       <FaChess />
                     </IconContext.Provider>
                   </div>
-                  <span className="bullet_label">Intrests</span>
+                  <span className="bullet_label">Interests</span>
                 </div>
               </div>
             </div>
@@ -127,67 +127,197 @@ function ResumeContainer() {
               className="resume_details_carousal"
               style={{ transform: `translateY(${e}px)` }}
             >
-              <div
-                className="resume_screen_container"
-                // style={{ backgroundColor: "red" }}
-              >
-                <h1> ADGITM </h1>
-                <p>BTECH (EEE)</p>
-                <h1> Bharti Public School</h1>
-                <p>CBSE</p>
+              <div className="resume_screen_container">
+                
+              
+                <div className="resume_details_heading">
+                  <div className="resume_main_heading">
+                    <div className="heading-bullet" />
+                    <span className="resume_color">
+                      Dr. Akhilesh Das Gupta Institute Of Technology And Management
+                    </span>
+                    <div className="heading_date">
+                      2018-2022
+                    </div>
+                  </div>
+                  <div className="resume_det_sub_heading">
+                    B.TECH( Electrical and Electronics Engineering)
+                  </div>
+                </div>
+                <div className="resume_details_heading">
+                  <div className="resume_main_heading">
+                    <div className="heading-bullet" />
+                    <span className="resume_color">
+                      Bharti Public School
+                    </span>
+                    <div className="heading_date">
+                      2011-2017
+                    </div>
+                  </div>
+                  <div className="resume_det_sub_heading">
+                    B.TECH( Electrical and Electronics Engineering)
+                  </div>
+                </div>
               </div>
               <div
-                className="resume_screen_container"
-                // style={{ backgroundColor: "blue" }}
-              >
-                <span>javascript</span>
-                <span>ReactNative</span>
-                <span>Node JS</span>
-                <span>C++</span>
-                <span>Datastuctures & algorithms</span>
-                <span>Css</span>
-                <span>Hml</span>
-                <span>React JS</span>
-                <span>Express JS</span>
-                <span>Mongo Db</span>
+                className="resume_screen_container programming_skills_container">
+                <div className="skill_parent">
+                  <div className="heading-bullet"/>
+                  <span className="resume_color">
+                    Javascript
+                  </span>
+                  <div className="skill_percentage">
+                    <div className="active_percentage_bar" />
+                  </div>
+                </div>
+                <div className="skill_parent">
+                  <div className="heading-bullet"/>
+                  <span className="resume_color">
+                    React Native
+                  </span>
+                  <div className="skill_percentage">
+                    <div className="active_percentage_bar" />
+                  </div>
+                </div>
+                <div className="skill_parent">
+                  <div className="heading-bullet"/>
+                  <span className="resume_color">
+                    React JS
+                  </span>
+                  <div className="skill_percentage">
+                    <div className="active_percentage_bar" />
+                  </div>
+                </div>
+                <div className="skill_parent">
+                  <div className="heading-bullet"/>
+                  <span className="resume_color">
+                    Node JS
+                  </span>
+                  <div className="skill_percentage">
+                    <div className="active_percentage_bar" />
+                  </div>
+                </div>
+                <div className="skill_parent">
+                  <div className="heading-bullet"/>
+                  <span className="resume_color">
+                    Express JS
+                  </span>
+                  <div className="skill_percentage">
+                    <div className="active_percentage_bar" />
+                  </div>
+                </div>
+                <div className="skill_parent">
+                  <div className="heading-bullet"/>
+                  <span className="resume_color">
+                    Mongo DB
+                  </span>
+                  <div className="skill_percentage">
+                    <div className="active_percentage_bar" />
+                  </div>
+                </div>
+                <div className="skill_parent">
+                  <div className="heading-bullet"/>
+                  <span className="resume_color">
+                    C++
+                  </span>
+                  <div className="skill_percentage">
+                    <div className="active_percentage_bar" />
+                  </div>
+                </div>
+                <div className="skill_parent">
+                  <div className="heading-bullet"/>
+                  <span className="resume_color">
+                    HTML
+                  </span>
+                  <div className="skill_percentage">
+                    <div className="active_percentage_bar" />
+                  </div>
+                </div>
+                <div className="skill_parent">
+                  <div className="heading-bullet"/>
+                  <span className="resume_color">
+                    CSS
+                  </span>
+                  <div className="skill_percentage">
+                    <div className="active_percentage_bar" />
+                  </div>
+                </div>
+                
               </div>
               <div
                 className="resume_screen_container"
                 // style={{ backgroundColor: "green" }}
               >
-                <a href="/">Personal Portfolio Website</a>
-                <h4>Technologies Used: React JS</h4>
-                <p>
-                  A Personal Portfolio website to showcase all my details and
-                  projects at one place.
-                </p>
+              <div className="resume_details_heading">
+                  <div className="resume_main_heading">
+                    <div className="heading-bullet" />
+                    <span className="resume_color">
+                    Personal Portfolio Website
+                    </span>
+                  </div>
+                  <div className="resume_det_sub_heading">
+                  Technologies Used: React JS
+                  </div>
+                  <span style={{fontSize: 12,textAlign: "justify"}}> A Personal Portfolio website to showcase all my details and
+                  projects at one place.</span>
+                </div>
+                
+                <div className="resume_details_heading">
+                  <div className="resume_main_heading">
+                    <div className="heading-bullet" />
+                    <span className="resume_color">
+                    Natours: Your Tour guide
+                    </span>
+                  </div>
+                  <div className="resume_det_sub_heading">
+                  Technologies Used: Node JS
+                  </div>
+                  <span style={{fontSize: `${12}px`,textAlign: "justify"}}>A tour guide website to go on your favourite adventour place.</span>
+                </div>
 
-                <a href="/">Wave Music Player</a>
-                <h4>Technologies Used: React JS</h4>
-                <p>A Music player.</p>
+                
+                <div className="resume_details_heading">
+                  <div className="resume_main_heading">
+                    <div className="heading-bullet" />
+                    <span className="resume_color">
+                    Wave music player
+                    </span>
+                  </div>
+                  <div className="resume_det_sub_heading">
+                  Technologies Used: React JS
+                  </div>
+                  <span style={{fontSize: `${12}px`,textAlign: "justify"}}> A Music player</span>
+                </div>
 
-                <a href="/">Natours: Your Tour guide</a>
-                <h4>Technologies Used: NODE JS, Mongo Db</h4>
-                <p>
-                  A Personal Portfolio website to showcase all my details and
-                  projects at one place.
-                </p>
+                
               </div>
               <div
                 className="resume_screen_container"
                 // style={{ backgroundColor: "yellow" }}
               >
-                <h1>Chess</h1>
-                <p>
-                  Apart from being a tech enthusiast and a code writer, i also
-                  like to play chess.
-                </p>
+              <div className="resume_details_heading">
+              <div className="resume_main_heading">
+                <div className="heading-bullet" />
+                <span className="resume_color">
+                chess
+                </span>
+              </div>
+              <div className="resume_det_sub_heading">
+              Apart from being a tech enthusiast and a code writer, i also like to play chess.
+              </div>
+            </div>
 
-                <h1>Working out</h1>
-                <p>
-                  Apart from being a tech enthusiast and a code writer, i also
-                  like to play chess.
-                </p>
+            <div className="resume_details_heading">
+              <div className="resume_main_heading">
+                <div className="heading-bullet" />
+                <span className="resume_color">
+                Competitive Gaming
+                </span>
+              </div>
+              <div className="resume_det_sub_heading">
+              I like to challenge my reflexes a lot while competing in football games, pushing the rank and having interactive gaming sessions excites me the most
+              </div>
+            </div>
               </div>
             </div>
           </div>
