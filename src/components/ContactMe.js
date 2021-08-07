@@ -1,11 +1,19 @@
 import React from "react"
 import styled from "styled-components"
 import Typewriter from "typewriter-effect";
+import {Image} from "semantic-ui-react";
+import { motion } from "framer-motion"
+import {fade} from "../animation";
+import { useScroll } from "./useScroll";
+
 
 
 const ContactForm = () => {
+    const [element, controls]  = useScroll();
+
     return (
-        <ContactMe>
+        
+        <ContactMe variants={fade} animate={controls} initial="hidden" ref= {element}>
             <ContactMeHeading>
              <h1>Contact Me</h1>
              <p> Let's Keep In Touch</p>
@@ -36,9 +44,10 @@ const ContactForm = () => {
                   }}
              />
              </StyledTypeWriter>
-
-             <span>Send your message</span>
-             <div className="contact_img"></div>
+            <ContactMeImage>
+             <div><span>Send your message</span></div>
+             <div className="send_message_image"></div>
+             </ContactMeImage>
              </ContactMeText>
              <ContactMeFormParent>
              <ContactMeForm>
@@ -57,7 +66,7 @@ const ContactForm = () => {
     )
 }
 
-const ContactMe = styled.div`
+const ContactMe = styled(motion.div)`
 display: flex;
 align-items: center;
 flex-direction: column;
@@ -83,14 +92,22 @@ margin-bottom: 2rem;
 `
 
 const ContactMeText = styled.div` 
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
 width: 50%;
-    span {
-        margin-bottom: 20rem; 
-}
+   
 `
 
-const styledSpan = styled.div`
-
+const ContactMeImage = styled.div`
+margin-left: 2rem;
+height: 50%;
+span {
+    font-size: 2rem;
+    margin-left: 0.5rem;
+    letter-spacing: 0.1rem;
+    color: grey;
+}
 `
 
 
@@ -110,6 +127,10 @@ const StyledTypeWriter = styled.div`
 font-family: sans-serif;
 font-weight:800;
 font-size:4rem;
+height: 40%;
+color: white;
+
+
 
 `
 
@@ -147,7 +168,9 @@ input {
     border-radius: 6px;
     height: 33px;
     font-family: inherit;
-    outline: black;
+    outline: none;
+    border: 0.02px solid;
+    background-color: #dfdede;
     &:hover {
         border-color: orange;
     }
@@ -157,12 +180,13 @@ input {
 }
 textarea {
     width: 80%;
-    border: 2px solid ;
+    border: 0.02px solid ;
     margin-left: 1rem;
     border-radius: 5px ;
     outline: black;
     height: 50px;
     font-family: inherit;
+    background-color: #dfdede;
     &:hover {
         border-color: orange;
     }

@@ -1,13 +1,24 @@
 import React from "react"
 import styled from "styled-components"
 import shubham3 from "../img/shubham3.png"
+import {motion} from 'framer-motion';
+import {PageAnimation} from '../animation';
+import { titleAnim } from "../animation";
+import { useInView } from "react-intersection-observer";
+import { useAnimation } from "framer-motion";
+import {fade} from "../animation"
+import { useScroll } from "./useScroll";
 
 const AboutMe = () => {
+    
+    const [element, controls]  = useScroll();
+    
     return(
-        <AboutMeParent>
+        
+        <AboutMeParent variants={fade} animate={controls} initial="hidden" ref= {element}>
             <AboutMeContainer>
               <AboutMeHeading>
-               <h2> ABOUT ME</h2>
+               <motion.h2 > ABOUT ME</motion.h2>
                <p > why choose me?</p>
                </AboutMeHeading>
               <AboutMeCard>
@@ -32,11 +43,12 @@ const AboutMe = () => {
               </AboutMeCard>
             </AboutMeContainer>
         </AboutMeParent>
+        
     )
 }
 
 
-const AboutMeParent = styled.div`
+const AboutMeParent = styled(motion.div)`
 min-height: 100vh;
 display: flex;
     flex-direction: column;
@@ -46,7 +58,7 @@ display: flex;
 
 `;
 
-const AboutMeContainer = styled.div` 
+const AboutMeContainer = styled(motion.div)` 
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -54,7 +66,7 @@ const AboutMeContainer = styled.div`
     width: 70%;
 `
 
-const AboutMeHeading = styled.div`
+const AboutMeHeading = styled(motion.div)`
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -71,7 +83,7 @@ p{
 }
 `
 
-const AboutMeCard = styled.div` 
+const AboutMeCard = styled(motion.div)` 
 margin-top: 5rem;
  justify-content: center;
  display: flex;
@@ -79,7 +91,7 @@ margin-top: 5rem;
  box-shadow: 0 0 20px -2px black;
 `;
 
-const AboutMeDetails  = styled.div`
+const AboutMeDetails  = styled(motion.div)`
 width: 50%;
 text-align: justify;
 display: flex;
@@ -99,7 +111,7 @@ li {
 
 `
 
-const AboutMePicture = styled.div `
+const AboutMePicture = styled(motion.div)`
     width: 50%;
     img {
         height: 100%;
@@ -108,7 +120,7 @@ const AboutMePicture = styled.div `
     }
 `
 
-const StyledButton = styled.div` 
+const StyledButton = styled(motion.div)` 
 margin-top: 2rem;
 display: flex;
 justify-content: flex-start;

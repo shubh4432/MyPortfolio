@@ -2,7 +2,10 @@ import React from "react";
 import { Image} from "semantic-ui-react";
 import Typewriter from "typewriter-effect";
 import styled from "styled-components";
-
+//Animation
+import {motion} from 'framer-motion';
+import {PageAnimation} from '../animation';
+import {titleAnim} from '../animation'
 
   
 const FirstContainer = () => {
@@ -18,7 +21,7 @@ const FirstContainer = () => {
           <div className="header_container">
         <div className="header_parent">
           <div className="header_logo">
-            <span>Shubham's Portfolio</span>
+            <motion.span variants={titleAnim} >Shubham's Portfolio</motion.span>
           </div>
           <div className="header_options">
             <div
@@ -54,7 +57,7 @@ const FirstContainer = () => {
       </div>
           <PortfolioDetails>
             <div className="details">
-            <h1> Hello, I'M <span>SHUBHAM</span></h1>
+            <motion.h1 variants={titleAnim} > Hello, I'M <span>SHUBHAM</span></motion.h1>
             <StyledTypeWriter>
             <Typewriter
   
@@ -83,8 +86,8 @@ const FirstContainer = () => {
               }}
               />
               </StyledTypeWriter>
-              <h2> Knack of building applications with front and back end operations.
-              </h2>
+              <motion.h2 variants={titleAnim} > Knack of building applications with front and back end operations.
+              </motion.h2>
               <StyledButton>
               <button > Hire Me</button>
 
@@ -112,17 +115,19 @@ const FirstContainer = () => {
        
        </div>
        </PortfolioContainer>
+       
 
     )
 };
 
-const StyledTypeWriter = styled.div`
+const StyledTypeWriter = styled(motion.div)`
 font-family: sans-serif;
 font-weight:800;
 font-size:4rem;
+color: white;
 `
 
-const PortfolioContainer = styled.div`
+const PortfolioContainer = styled(motion.div)`
   display: block;
   min-height: 100vh;
   align-items: center;
@@ -130,7 +135,7 @@ const PortfolioContainer = styled.div`
   
   
 `
-const PortfolioHeader = styled.div`
+const PortfolioHeader = styled(motion.div)`
 min-height: 20vh;
 display: flex;
 h2 {
@@ -155,6 +160,9 @@ h1{
 h2 {
     font-size: 2rem;
     color: white;
+}
+span {
+  color: red;
 }
 `
 const PortfolioImage = styled.div`

@@ -3,8 +3,9 @@ import "./App.css"
 import FirstContainer from "./components/FirstContainer";
 import GlobalStyle from "./components/GlobalStyles";
 import AboutMe from "./components/AboutMe";
-import Resume from "./components/Resume";
+import Resume from "./components/resumeContainer";
 import ContactForm from "./components/ContactMe";
+
 
 function App() {
   return (

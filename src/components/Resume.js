@@ -1,15 +1,20 @@
 import React from "react"
 import styled from "styled-components"
-import { Icon } from "semantic-ui-react"
 import { FaLaptopCode, FaChess} from 'react-icons/fa'
 import { AiOutlineProject} from 'react-icons/ai'
 import { GiBookshelf} from 'react-icons/gi'
 import { IconContext } from "react-icons";
+import { motion } from "framer-motion"
+import {fade} from "../animation";
+import { useScroll } from "./useScroll";
 
 const Resume = () => {
-   
+  
+  const [element, controls]  = useScroll();
+
     return(
-        <StyledResume>
+      
+        <StyledResume variants={fade} animate={controls} initial="hidden" ref= {element}>
          <div>
           <Heading>
            <PrimaryHeading>Resume</PrimaryHeading>
@@ -48,7 +53,7 @@ const Resume = () => {
     )
 }
 
-const StyledResume = styled.div`
+const StyledResume = styled(motion.div)`
 display: flex;
 align-items: center;
 flex-direction: column;
@@ -57,14 +62,14 @@ min-height: fit-content;
 margin: 120px 0;
 `
 
-const Navbar = styled.div` 
+const Navbar = styled(motion.div)` 
 box-shadow: 15px 0 9px -15px #1f2235;
 height: 100%;
 width: 320px;
 
 
 `
-const NavContainer = styled.div`
+const NavContainer = styled(motion.div)`
 display: flex;
 align-items: center;
 height: 100%;
@@ -74,7 +79,7 @@ position: relative;
 `
     
 
-const NavbarDetails= styled.div` 
+const NavbarDetails= styled(motion.div)` 
 min-height: 100%;
 width: 86%;
 position: relative;
@@ -93,7 +98,7 @@ span {
 
 
 
-const Heading = styled.div` 
+const Heading = styled(motion.div)` 
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -101,13 +106,13 @@ width: 100%;
 margin: 0 0 50px;
 
 `
-const PrimaryHeading = styled.div`
+const PrimaryHeading = styled(motion.div)`
 font-size: 32px;
 color: #1f2235;
 font-family: "Poppins";
 font-weight: 800;
 `
-const SecondaryHeading = styled.div`
+const SecondaryHeading = styled(motion.div)`
 letter-spacing: 3px;
 margin: 8px 0 18px;
 font-size: 12px;
@@ -117,7 +122,7 @@ color: black;
 
 
 
-const ResumeCard = styled.div` 
+const ResumeCard = styled(motion.div)` 
 display: flex;
 height: 360px;
 width: 1000px;
@@ -129,7 +134,7 @@ const Details= styled.div `
 
 `
 
-const IconContainer = styled.div `
+const IconContainer = styled(motion.div) `
 display: flex;
 min-height: 100%;
 flex-direction:column ;
