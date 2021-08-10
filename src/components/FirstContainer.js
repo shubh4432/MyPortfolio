@@ -6,9 +6,12 @@ import styled from "styled-components";
 import {motion} from 'framer-motion';
 import {PageAnimation} from '../animation';
 import {titleAnim} from '../animation'
+import { Link } from "react-router-dom";
+//Node
+const express = require('express');
 
   
-const FirstContainer = () => {
+const FirstContainer = ({scrollResume}) => {
   function changecolor(event) {
     event.target.style.color = "red";
   }
@@ -16,6 +19,7 @@ const FirstContainer = () => {
     event.target.style.color = "white";
   }
     return (
+      
         <PortfolioContainer >
           <div className="home_container">
           <div className="header_container">
@@ -42,6 +46,7 @@ const FirstContainer = () => {
               className="header_option header_option_separator"
               onMouseOver={changecolor}
               onMouseLeave={changeback}
+              onClick={()=>scrollResume}
             >
               <span>Resume</span>
             </div>
