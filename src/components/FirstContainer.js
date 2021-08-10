@@ -6,7 +6,7 @@ import styled from "styled-components";
 import {motion} from 'framer-motion';
 import {PageAnimation} from '../animation';
 import {titleAnim} from '../animation';
-import { Link } from "react-router-dom";
+import {Link} from "react-scroll";
 
 
   
@@ -27,6 +27,7 @@ const FirstContainer = ({scrollResume}) => {
             <motion.span variants={titleAnim} >Shubham's Portfolio</motion.span>
           </div>
           <div className="header_options">
+          <Link activeClass="active" to="first_container" spy={true} smooth={true}>
             <div
               className="header_option header_option_separator"
               onMouseOver={changecolor}
@@ -34,6 +35,8 @@ const FirstContainer = ({scrollResume}) => {
             >
               <span>Home</span>
             </div>
+            </Link>
+            <Link  to="about_me" spy={true} smooth={true}>
             <div
               className="header_option header_option_separator"
               onMouseOver={changecolor}
@@ -41,6 +44,8 @@ const FirstContainer = ({scrollResume}) => {
             >
               <span>About Me</span>
             </div>
+            </Link>
+            <Link  to="resume" spy={true} smooth={true}>
             <div
               className="header_option header_option_separator"
               onMouseOver={changecolor}
@@ -49,6 +54,8 @@ const FirstContainer = ({scrollResume}) => {
             >
               <span>Resume</span>
             </div>
+            </Link>
+            <Link  to="contact_form" spy={true} smooth={true}>
             <div
               className="header_option"
               onMouseOver={changecolor}
@@ -56,6 +63,7 @@ const FirstContainer = ({scrollResume}) => {
             >
               <span>Contact Me</span>
             </div>
+            </Link>
           </div>
         </div>
       </div>

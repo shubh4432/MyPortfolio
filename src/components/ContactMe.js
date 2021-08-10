@@ -13,7 +13,7 @@ const ContactForm = () => {
 
     return (
         
-        <ContactMe variants={fade} animate={controls} initial="hidden" ref= {element}>
+        <ContactMe id="contact_form" variants={fade} animate={controls} initial="hidden" ref= {element}>
             <ContactMeHeading>
              <h1>Contact Me</h1>
              <p> Let's Keep In Touch</p>

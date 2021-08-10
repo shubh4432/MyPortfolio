@@ -55,7 +55,7 @@ function ResumeContainer() {
 
   return (
     <Resume variants={fade} animate={controls} initial="hidden" ref= {element}>
-    <div className="resume_container">
+    <div className="resume_container" id="resume">
       <div className="resume_content">
         <div className="resume_heading">
           <div className="res_heading">RESUME</div>

@@ -15,7 +15,7 @@ const AboutMe = () => {
     
     return(
         
-        <AboutMeParent variants={fade} animate={controls} initial="hidden" ref= {element}>
+        <AboutMeParent id="about_me" variants={fade} animate={controls} initial="hidden" ref= {element}>
             <AboutMeContainer>
               <AboutMeHeading>
                <motion.h2 > ABOUT ME</motion.h2>

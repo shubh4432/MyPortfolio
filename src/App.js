@@ -5,7 +5,6 @@ import GlobalStyle from "./components/GlobalStyles";
 import AboutMe from "./components/AboutMe";
 import Resume from "./components/resumeContainer";
 import ContactForm from "./components/ContactMe";
-
 function App() {
   const scrollResume = () => {
     resumeRef.current.scrollIntoView();
@@ -20,9 +19,9 @@ function App() {
   return (
     <div className="App">
       <GlobalStyle />
-      <FirstContainer scrollResume={scrollResume}/>
+      <FirstContainer  scrollResume={scrollResume}/>
       <AboutMe />
-      <Resume ref={resumeRef}/>
+      <Resume />
       <ContactForm />
     </div>
   );
