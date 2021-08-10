@@ -5,10 +5,9 @@ import styled from "styled-components";
 //Animation
 import {motion} from 'framer-motion';
 import {PageAnimation} from '../animation';
-import {titleAnim} from '../animation'
+import {titleAnim} from '../animation';
 import { Link } from "react-router-dom";
-//Node
-const express = require('express');
+
 
   
 const FirstContainer = ({scrollResume}) => {
