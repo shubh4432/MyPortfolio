@@ -65,7 +65,7 @@ const FirstContainer = ({scrollResume}) => {
       </div>
           <PortfolioDetails>
             <div className="details">
-            <motion.h1 variants={titleAnim} > Hello, I'M <span>SHUBHAM</span></motion.h1>
+            <h1> Hello, I'M <span>SHUBHAM</span></h1>
             <StyledTypeWriter>
             <Typewriter
   
@@ -100,7 +100,7 @@ const FirstContainer = ({scrollResume}) => {
               <Link  to="contact_form" spy={true} smooth={true}>
               <button > Hire Me</button>
               </Link>
-              <a download="Resume" href="abc.pdf" >
+              <a download="Resume" href="Resume.pdf" >
               <button> Resume</button>
               </a>
               </StyledButton>
@@ -143,7 +143,10 @@ const PortfolioContainer = styled(motion.div)`
   min-height: 100vh;
   align-items: center;
   justify-content: center;
-
+ @media only screen and (max-width:768px) {
+      display: flex;
+      flex-direction: column;
+ }
   
   
 `
@@ -176,6 +179,24 @@ h2 {
 span {
   color: red;
 }
+@media  (max-width:767px) {
+      
+      
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+      padding: 0rem;
+      span{
+        font-size: 2rem;
+      }
+      h2{
+        font-size: 1rem;
+      }
+      h1{
+        font-size: 2rem;
+      }
+      
+ }
 `
 const PortfolioImage = styled.div`
 margin-right: 10rem;

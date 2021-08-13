@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, { Component } from "react";
 import styled from "styled-components"
 import Typewriter from "typewriter-effect";
 import {Image} from "semantic-ui-react";
@@ -14,58 +14,55 @@ import {MdEmail} from "react-icons/md"
 import axios from "axios";
 
 
-const ContactForm = () => {
-    const [element, controls]  = useScroll();
-    const [appState, changeState] = useState({
-        name: '',
-        email: '',
-        message: '',
-    })
-
-    const handleName = (e) => {
-        changeState({...appState, name: e.target.value});
+class ContactForm extends Component {
+    constructor() {
+      super();
+      this.state = {
+        name: "",
+        email: "",
+        message: "",
+      };
     }
-    const handleEmail = (e) => {
-        changeState({...appState, email: e.target.value});
-    }
-    const handleMessage = (e) => {
-        changeState({...appState, message: e.target.value});
-    }
-
-    const formSubmit = (e) => {
-        e.preventDefault();
-        let data = {
-            name: appState.name,
-            email: appState.email,
-            message: appState.message
-        }
-        axios({
-            method: 'Post',
-            url: '/api/forms',
-            data:{
-                name: appState.name,
-                email: appState.email,
-                message: appState.message
-            }
+  
+    handleName = (event) => {
+      this.setState({ name: event.target.value });
+    };
+    handleEmail = (event) => {
+      this.setState({ email: event.target.value });
+    };
+    handleMessage = (event) => {
+      this.setState({ message: event.target.value });
+    };
+  
+    submitEmail(e) {
+      e.preventDefault();
+      axios({
+        method: "POST",
+        url: "http://localhost:3001/send",
+        data: this.state,
+      })
+        .then((response) => {
+          if (response.data.status === "success") {
+            alert("Message Sent.");
+            this.resetForm();
+          } else if (response.data.status === "fail") {
+            alert("Message failed to send.");
+          }
         })
-        .then(res=>{
-            console.log('message sent');
-        },()=>resetForm())
-        .catch(()=>{
-            console.log('message not sent')
-        })
+        .catch((req) => {
+          console.log(req);
+        });
     }
-    const resetForm = () =>{
-        changeState({
-            name: '',
-        email: '',
-        message: '',
-        })
+  
+    resetForm() {
+      this.setState({ name: "", email: "", subject: "", message: "" });
     }
-
+render ()  {
+    // const [element, controls]  = useScroll();
+    
     return (
         
-        <ContactMe id="contact_form" variants={fade} animate={controls} initial="hidden" ref= {element}>
+        <ContactMe id="contact_form"  >
             <ContactMeHeading>
              <h1>Contact Me</h1>
              <p> Let's Keep In Touch</p>
@@ -83,7 +80,7 @@ const ContactForm = () => {
                   
                 .pauseFor(1500)
                 .deleteAll()
-                .typeString("Email me and 📧")
+                .typeString("Email me 📧 and ")
                 .pauseFor(1500)
                 .deleteAll()
                 .typeString("Get your job done 💯")
@@ -109,17 +106,37 @@ const ContactForm = () => {
              </ContactMeImage>
              </ContactMeText>
              <ContactMeFormParent>
-             <ContactMeForm >
-               <form onSubmit={(e) =>formSubmit(e)}>
-                <label htmlfor="name" >Name</label>
-                <input type= "text" name="name" value={appState.name} onChange={(event)=>handleName(event)}/>
+             
+             <ContactMeForm onSubmit={this.submitEmail.bind(this)} method="POST" >
+            
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  value={this.state.name}
+                  onChange={this.handleName.bind(this)}
+                />
                 <label for="email">Email</label>
-                <input type= "email" name="email" value={appState.email} onChange={(event)=>handleEmail(event)} required/>
+                <input
+                  type="email"
+                  name="email"
+                  value={this.state.email}
+                  onChange={this.handleEmail.bind(this)}
+                />
                 <label for="message">Message</label>
-                <textarea type="text"  name="Message"value={appState.message} onChange={(event)=>handleMessage(event)} ></textarea>
-                <button type="submit" > Send📩</button>
-                </form>
+                <textarea
+                  type="text"
+                  name="Message"
+                  value={this.state.message}
+                  onChange={this.handleMessage.bind(this)}
+                ></textarea>
+                <button type="submit" name="button">
+                  {" "}
+                  Send📩
+                </button>
+              
                </ContactMeForm>
+               
                </ContactMeFormParent>
              </ContactMeBox>
               <StyledIcons>
@@ -131,6 +148,7 @@ const ContactForm = () => {
               <p>Copyright © 2021 Shubham Verma</p>
         </ContactMe>
     )
+}
 }
 
 const ContactMe = styled(motion.div)`
@@ -145,6 +163,7 @@ p{
     font-weight: 500;
     letter-spacing: 0.11rem;
 }
+ 
 `
 
 const ContactMeHeading= styled.div`
@@ -192,6 +211,13 @@ background-color: #1f2235;
 border-radius: 15px;
 box-shadow: 0 0 20px 5px black;
 z-index:2;
+@media only screen and (max-width:767px) {
+  height: 600px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+}
 `
 
 
@@ -202,6 +228,10 @@ font-size:4rem;
 height: 40%;
 color: white;
 
+@media only screen and (max-width:767px) {
+  margin-left: 5rem;
+  font-size: 3.5rem;
+}
 
 
 `
@@ -216,7 +246,7 @@ width: 50%;
 
 `
 
-const ContactMeForm = styled.div`
+const ContactMeForm = styled.form`
 margin-top: 2.5rem;
 height: 90%;
 border-radius: 15px;
@@ -279,12 +309,20 @@ width: 20%;
  margin-bottom: 2rem;
  display: flex;
  justify-content: space-evenly;
+ @media only screen and (max-width:767px) {
+   width: 40%;
+   justify-content: space-evenly;
+ }
 `;
 
 const ContactDetails = styled.div`
     span {
         color:white;
     }
+    @media only screen and (max-width:  767px) {
+      margin-top: 2rem;
+      justify-content: space-evenly;
+    }
 `
 
-export default ContactForm
+export default ContactForm;

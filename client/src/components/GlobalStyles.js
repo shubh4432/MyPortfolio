@@ -11,7 +11,8 @@ const GlobalStyle = createGlobalStyle`
 
 body {
     font-family: 'Inter', sa-serif;
-    overflow-x: hidden;
+    overflow-x: none;
+   
 }
 
 html {

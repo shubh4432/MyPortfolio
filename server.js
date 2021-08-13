@@ -1,84 +1,53 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const cors = require('cors');
-const nodemailer = require('nodemailer');
-// const { getMaxListeners } = require('process');
+const express = require("express");
+const nodemailer = require("nodemailer");
+const bodyParser = require("body-parser");
+const cors = require("cors");
+require("dotenv").config();
 
 const app = express();
-
-
-  const dotenv = require('dotenv');
-
-dotenv.config({path: './config.env'})
-
-//View engine setup
-// app.engine('handlebars',exphbs());
-// app.set('view engine', 'handlebars');
-
-//Body Parser Middleware
-app.use(bodyParser.urlencoded({ extended: false}));
 app.use(bodyParser.json());
-app.use(cors);
+app.use(cors());
 
-app.get('/', (req, res) => {
-  res.send('welcome to my form');
+const transporter = nodemailer.createTransport({
+  host: "smtp.gmail.com", //replace with your email provider
+  port: 587,
+  auth: {
+    user: process.env.EMAIL,
+    pass: process.env.PASSWORD,
+  },
 });
 
-const smtpTransport = nodemailer.createTransport({
-  service: 'Gmail',
-
-  auth: {
-    user: process.env.EMAIL_USERNAME,
-    pass: process.env.EMAIL_PASSWORD,
+transporter.verify(function (error, success) {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log("Server is ready to take our messages");
   }
+});
+app.post("/send", (req, res, next) => {
+  //var name = req.body.name;
+  var email = req.body.email;
 
-})
-app.post('/api/forms', (req, res) => {
-  let data = req.body;
-  
-let mailoptions = {
-  from: data.email,
-  to: process.env.EMAIL_USERNAME,
-  subject: `message from ${data.name}`,
-  html: `
-  <h3>Informations</h3>
-    <ul>
-      <li>Name: ${data.name}</li>
-      <li>Email: ${data.Email}</li>
-      <li>Message: ${data.message}</li>
-    </ul>
-  <p>${data.message}</p>
-  `
-}
+  var message = req.body.message;
 
-smtpTransport.sendMail(mailoptions, (error, response) => {
-  if(error){
-    res.send(error);
-  }else{
-    res.send('Success')
-  }
-})
-smtpTransport.close();
+  var mail = {
+    from: email,
+    to: process.env.EMAIL,
 
-})
-// create reusable transporter object using the default SMTP transport
-// let transporter = nodemailer.createTransport({
-//     host: "smtp.ethereal.email",
-//     port: 587,
-//     secure: false, // true for 465, false for other ports
-//     auth: {
-//       user: testAccount.user, // generated ethereal user
-//       pass: testAccount.pass, // generated ethereal password
-//     },
-//   });
+    text: message,
+  };
 
-  // send mail with defined transport object
-  // let info = await transporter.sendMail({
-  //   from: '"Fred Foo 👻" <foo@example.com>', // sender address
-  //   to: "bar@example.com, baz@example.com", // list of receivers
-  //   subject: "Hello ✔", // Subject line
-  //   text: "Hello world?", // plain text body
-  //   html: "<b>Hello world?</b>", // html body
-  // });
+  transporter.sendMail(mail, (err, data) => {
+    if (err) {
+      res.json({
+        status: "fail",
+      });
+    } else {
+      res.json({
+        status: "success",
+      });
+    }
+  });
+});
 
-app.listen(3001, () => console.log('Server started...'));
+app.listen(3001, console.log("server started...."));

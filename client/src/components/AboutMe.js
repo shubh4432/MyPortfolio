@@ -25,17 +25,19 @@ const AboutMe = () => {
                 <AboutMeDetails>
                     <p>Full stack web and mobile developer with background knowledge of MERN stacks with redux, along with a knack of building applications with utmost efficiency. Strong professional with a BSC willing to be an asset for an organization.</p>
                     <h1>Here are a few details</h1>
+                    <ul>
                     <li>Full Stack web and mobile development</li>
                     <li>Interactive Front End as per the design</li>
                     <li>React and React Native</li>
                     <li>Redux for State Mnanagement</li>
                     <li>Building REST API</li>
                     <li>Managing database</li>
+                    </ul>
                     <StyledButton>
                     <Link  to="contact_form" spy={true} smooth={true}>
               <button style={{backgroundColor: "black"}}> Hire Me</button>
         </Link>
-        <a download="Resume" href="abc.pdf" >
+        <a download="Resume" href="Resume.pdf" >
               <button style={{backgroundColor: "orangered"}}> Resume</button>
               </a>
               </StyledButton>
@@ -59,15 +61,18 @@ display: flex;
 
 `;
 
-const AboutMeContainer = styled(motion.div)` 
+const AboutMeContainer = styled.div` 
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 70%;
+    @media only screen and (max-width:767px) {
+        width: 70%;
+    }
 `
 
-const AboutMeHeading = styled(motion.div)`
+const AboutMeHeading = styled.div`
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -82,9 +87,10 @@ p{
     font-weight: 400;
     font-size: 20px;
 }
+
 `
 
-const AboutMeCard = styled(motion.div)` 
+const AboutMeCard = styled.div` 
 margin-top: 5rem;
  justify-content: center;
  display: flex;
@@ -92,7 +98,7 @@ margin-top: 5rem;
  box-shadow: 0 0 20px -2px black;
 `;
 
-const AboutMeDetails  = styled(motion.div)`
+const AboutMeDetails  = styled.div`
 width: 50%;
 text-align: justify;
 display: flex;
@@ -107,21 +113,32 @@ li {
     list-style-type: circle ;
     
 }
+@media only screen and (max-width:767px) {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+
 
 
 
 `
 
-const AboutMePicture = styled(motion.div)`
+const AboutMePicture = styled.div`
     width: 50%;
     img {
         height: 100%;
         width: 100%;
          
     }
+    @media (max-width: 767px) {
+        display: none;
+        width: 0px;
+    }
 `
 
-const StyledButton = styled(motion.div)` 
+const StyledButton = styled.div` 
 margin-top: 2rem;
 display: flex;
 justify-content: flex-start;

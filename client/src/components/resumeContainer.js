@@ -167,7 +167,7 @@ function ResumeContainer() {
                     Javascript
                   </span>
                   <div className="skill_percentage">
-                    <div className="active_percentage_bar" />
+                    <div style={{width:"70%"}}className="active_percentage_bar" />
                   </div>
                 </div>
                 <div className="skill_parent">
@@ -176,7 +176,7 @@ function ResumeContainer() {
                     React Native
                   </span>
                   <div className="skill_percentage">
-                    <div className="active_percentage_bar" />
+                    <div style={{width:"60%"}} className="active_percentage_bar" />
                   </div>
                 </div>
                 <div className="skill_parent">
@@ -185,7 +185,7 @@ function ResumeContainer() {
                     React JS
                   </span>
                   <div className="skill_percentage">
-                    <div className="active_percentage_bar" />
+                    <div style={{width:"65%"}}className="active_percentage_bar" />
                   </div>
                 </div>
                 <div className="skill_parent">
@@ -194,7 +194,7 @@ function ResumeContainer() {
                     Node JS
                   </span>
                   <div className="skill_percentage">
-                    <div className="active_percentage_bar" />
+                    <div style={{width:"55%"}}className="active_percentage_bar" />
                   </div>
                 </div>
                 <div className="skill_parent">
@@ -203,7 +203,7 @@ function ResumeContainer() {
                     Express JS
                   </span>
                   <div className="skill_percentage">
-                    <div className="active_percentage_bar" />
+                    <div style={{width:"60%"}} className="active_percentage_bar" />
                   </div>
                 </div>
                 <div className="skill_parent">
@@ -212,7 +212,7 @@ function ResumeContainer() {
                     Mongo DB
                   </span>
                   <div className="skill_percentage">
-                    <div className="active_percentage_bar" />
+                    <div style={{width:"70%"}}className="active_percentage_bar" />
                   </div>
                 </div>
                 <div className="skill_parent">
@@ -221,7 +221,7 @@ function ResumeContainer() {
                     C++
                   </span>
                   <div className="skill_percentage">
-                    <div className="active_percentage_bar" />
+                    <div style={{width:"70%"}}className="active_percentage_bar" />
                   </div>
                 </div>
                 <div className="skill_parent">
@@ -230,7 +230,7 @@ function ResumeContainer() {
                     HTML
                   </span>
                   <div className="skill_percentage">
-                    <div className="active_percentage_bar" />
+                    <div style={{width:"85%"}}className="active_percentage_bar" />
                   </div>
                 </div>
                 <div className="skill_parent">
@@ -239,7 +239,7 @@ function ResumeContainer() {
                     CSS
                   </span>
                   <div className="skill_percentage">
-                    <div className="active_percentage_bar" />
+                    <div style={{width:"85%"}} className="active_percentage_bar" />
                   </div>
                 </div>
                 

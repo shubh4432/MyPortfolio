@@ -1,280 +1,328 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap");
 .App {
-    margin: 0;
-    overflow-y: overlay;
-    font-family: "Poppins";
-    -webkit-font-smoothing: antialiased;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212529;
-    text-align: left;
-    background-color: #fff;
-    display: block;
-    scroll-behavior: smooth;
-    
-  }
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow-y: overlay;
+  overflow-x: none;
+  font-family: "Poppins";
+  -webkit-font-smoothing: antialiased;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+  display: block;
+  scroll-behavior: smooth;
+}
 
-.home_container{
-    background-image: url(./img/img2.jpeg);
+.home_container {
+  background-color: rgb(21, 21, 61);
 }
 .contact_img {
-
   background-image: url(img/message.png);
 }
 .header_container {
+  display: flex;
+  justify-content: center;
+  height: 140px;
+  color: white;
+}
+.header_parent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 70%;
+  color: white;
+}
+
+.header_logo {
+  font-size: 300%;
+  font-weight: 800;
+  font-family: "Poppins";
+  color: white;
+}
+.header_options {
+  display: flex;
+  align-items: center;
+}
+.header_option {
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.header_option_separator {
+  margin: 0 50px 0 0;
+}
+@media only screen and (max-width: 767px) {
+  .header-parent {
+    width: 100%;
+    padding: 0 40px;
+    position: relative;
     display: flex;
     justify-content: center;
-    height: 140px;
-    color: white;
-  }
-  .header_parent {
-    display: flex;
     align-items: center;
-    justify-content: space-between;
-    height: 100%;
-    width: 70%;
-    color: white;
-  }
-  .header_logo {
-    font-size: 50px;
-    font-weight: 800;
-    font-family: "Poppins";
-    color: white;
   }
   .header_options {
-    display: flex;
-    align-items: center;
+    display: none;
+    width: 0%;
   }
-  .header_option {
-    font-size: 16px;
-    cursor: pointer;
-    font-weight: 600;
+
+  .header_logo {
+    margin-left: 7rem;
+    font-size: 250%;
   }
-  .header_option_separator {
-    margin: 0 50px 0 0;
+  .profile_picture {
+    margin-bottom: 8px;
   }
-  
+  .profile_picture_background {
+    margin: 0 0 0 0px;
+  }
+}
 
-
-
-
-.portfolio_footer{
-    height: 17.8%;
-    width: 100%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
+.portfolio_footer {
+  height: 17.8%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 .profile_picture {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 1px 0 0 white;
-    border-radius: 50%;
-    height: 380px;
-    width: 380px;
-    margin: 0 0 0 100px;
-  }
-  .profile_picture_background {
-    height: 92%;
-    width: 92%;
-    border-radius: 50%;
-    background-image: url(./img/shubham3.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    /* background-position: 20%; */
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 0 0 white;
+  border-radius: 50%;
+  height: 380px;
+  width: 380px;
+}
+.profile_picture_background {
+  height: 92%;
+  width: 92%;
+  border-radius: 50%;
+  background-image: url(./img/shubham3.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-position: 20%; */
+}
 
-.footer_parent{
-    width: 100%;
-    height: 100%;
-    max-width: 1920px;
+@media only screen and (max-width: 767px) {
+  .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+
+.footer_parent {
+  width: 100%;
+  height: 100%;
+  max-width: 1920px;
 }
 img {
-    max-width: 100%;
-    height: 150px;
-    vertical-align: middle;
-    border-style: none;
-  }
+  max-width: 100%;
+  height: 150px;
+  vertical-align: middle;
+  border-style: none;
+}
 
-  .send_message_image{
-    height: 80%;
-    width: 100%;
-    background-image: url(./img/message.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  .resume_container {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    min-height: -webkit-fit-content;
-    min-height: -moz-fit-content;
-    min-height: fit-content;
-    margin: 120px 0;
-  }
+.send_message_image {
+  height: 80%;
+  width: 100%;
+  background-image: url(./img/message.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.resume_container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  margin: 120px 0;
+}
 
-  .resume_container.span{
-    color: #212529;
-  }
-  
-  .resume_heading {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin: 0 0 50px;
-  }
-  .res_heading {
-    font-size: 32px;
-    color: #1f2235;
-    font-family: "Poppins";
-    font-weight: 600;
-  }
-  .res_heading_sub {
-    letter-spacing: 3px;
-    margin: 8px 0 18px;
-    font-size: 12px;
-    color: black;
-  }
+.resume_container.span {
+  color: #212529;
+}
+
+.resume_heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0 0 50px;
+}
+.res_heading {
+  font-size: 32px;
+  color: #1f2235;
+  font-family: "Poppins";
+  font-weight: 600;
+}
+.res_heading_sub {
+  letter-spacing: 3px;
+  margin: 8px 0 18px;
+  font-size: 12px;
+  color: black;
+}
+.resume_card {
+  display: flex;
+  height: 360px;
+  width: 1100px;
+  color: black;
+}
+
+.resume_bullets {
+  box-shadow: 15px 0 9px -15px #1f2235;
+  height: 100%;
+  width: 320px;
+}
+.resume_bullets_details {
+  flex-grow: 1;
+  width: 800px;
+  overflow: hidden;
+  padding: 0 0 0 30px;
+}
+@media only screen and (max-width: 767px) {
   .resume_card {
     display: flex;
-    height: 360px;
-    width: 1100px;
-    color: black;
+    height: 720px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .resume_bullets {
-    box-shadow: 15px 0 9px -15px #1f2235;
-    height: 100%;
-    width: 320px;
+    width: 50%;
+    height: 50%;
   }
   .resume_bullets_details {
-    flex-grow: 1;
-    width: 800px;
-    overflow: hidden;
-    padding: 0 0 0 30px;
-  }
-  .bullets_container {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    position: relative;
-  }
-  .bullets_icons {
-    width: 40px;
-    height: 100%;
-    z-index: 1;
-    background-color: #1f2235;
-    position: absolute;
-  }
-  .bullets {
-    width: 86%;
-    position: relative;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
-  
-  .bullet {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    background-color: #1f2235;
-    height: 40px;
-    margin: 15px 0;
-    padding: 0 8px;
-    border-radius: 20px;
-    width: 30px;
-    transition: width 0.6s ease;
-    color: black;
-  }
-  
-  .bullet_label {
-    font-size: 20px;
-    white-space: nowrap;
-    font-family: "Poppins";
-    font-weight: 400;
-    /* color: black; */
-  }
-  .bullet_logo {
-    height: 25px;
-    margin: 0 30px 0 0;
-  }
-  .selected_bullet {
-    color: white;
-    width: 100%;
-  }
-  .resume_details_carousal {
-    transition: transform 1s ease-out;
-  }
-  
-  .resume_screen_container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 360px;
-    width: 100%;
-  }
-  .resume_details_heading{
-    display: flex;
-    flex-direction: column;
-    padding: 0 0 0 40px;  
-  }
-  .resume_main_heading{
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    width: 50%;
+    height: 50%;
     
   }
-  .resume_det_sub_heading{
-    font-size: 14px;
-    font-family: "Poppins";
-    font-weight: 600;
-    margin: 10px 0 0
-  }
+}
+.bullets_container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.bullets_icons {
+  width: 40px;
+  height: 100%;
+  z-index: 1;
+  background-color: #1f2235;
+  position: absolute;
+}
+.bullets {
+  width: 86%;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.bullet {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: #1f2235;
+  height: 40px;
+  margin: 15px 0;
+  padding: 0 8px;
+  border-radius: 20px;
+  width: 30px;
+  transition: width 0.6s ease;
+  color: black;
+}
+
+.bullet_label {
+  font-size: 20px;
+  white-space: nowrap;
+  font-family: "Poppins";
+  font-weight: 400;
+  /* color: black; */
+}
+.bullet_logo {
+  height: 25px;
+  margin: 0 30px 0 0;
+}
+.selected_bullet {
+  color: white;
+  width: 100%;
+}
+.resume_details_carousal {
+  transition: transform 1s ease-out;
+}
+
+.resume_screen_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 360px;
+  width: 100%;
+}
+.resume_details_heading {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 0 40px;
+}
+.resume_main_heading {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.resume_det_sub_heading {
+  font-size: 14px;
+  font-family: "Poppins";
+  font-weight: 600;
+  margin: 10px 0 0;
+}
 
 .heading-bullet {
-      position: absolute;
-      left: -30px;
-      height: 15px;
-      width: 15px;
-      top: 5px;
-      border-radius: 50%;
-      background-color: #ff5823;
-  }
-.heading_date{
-    background-color: #ff5823;
-    padding: 4px 12px;
-    font-size: 14px;
-    border-radius: 14px;
-    color: white;
-}
-.resume_sub_heading{
+  position: absolute;
+  left: -30px;
+  height: 15px;
+  width: 15px;
+  top: 5px;
+  border-radius: 50%;
   background-color: #ff5823;
-    padding: 4px 12px;
-    font-size: 14px;
-    border-radius: 14px;
-    color: white;
 }
-.resume_color{
-    color: orangered;
-    font-size: 14px;
+.heading_date {
+  background-color: #ff5823;
+  padding: 4px 12px;
+  font-size: 14px;
+  border-radius: 14px;
+  color: white;
+}
+.resume_sub_heading {
+  background-color: #ff5823;
+  padding: 4px 12px;
+  font-size: 14px;
+  border-radius: 14px;
+  color: white;
+}
+.resume_color {
+  color: orangered;
+  font-size: 14px;
 }
 
-  
 .res_det_heading {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-.programming_skills_container{
+.programming_skills_container {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -282,21 +330,21 @@ img {
   flex-wrap: wrap;
   padding: 0 0 0 30px;
 }
-.skill_parent{
+.skill_parent {
   display: flex;
   flex-direction: column;
   position: relative;
   width: 50%;
 }
-.skill_percentage{
+.skill_percentage {
   position: relative;
-    height: 15px;
-    width: 70%;
-    background-color: #ff5823;
+  height: 15px;
+  width: 70%;
+  background-color: #ff5823;
 }
-.active_percentage_bar{
+.active_percentage_bar {
   height: 15px;
   position: absolute;
   background-color: #1f2235;
-  width: 85%;
+  
 }
