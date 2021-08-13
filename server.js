@@ -49,5 +49,5 @@ app.post("/send", (req, res, next) => {
     }
   });
 });
-
-app.listen(3001, console.log("server started...."));
+const port = process.env.PORT ||3001
+app.listen(port, console.log("server started...."));
