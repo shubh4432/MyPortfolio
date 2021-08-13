@@ -9,6 +9,8 @@ import {titleAnim} from '../animation';
 import {Link} from "react-scroll";
 
 
+
+
   
 const FirstContainer = ({scrollResume}) => {
   function changecolor(event) {
@@ -17,6 +19,8 @@ const FirstContainer = ({scrollResume}) => {
   function changeback(event) {
     event.target.style.color = "white";
   }
+
+  
     return (
       
         <PortfolioContainer >
@@ -27,15 +31,7 @@ const FirstContainer = ({scrollResume}) => {
             <motion.span variants={titleAnim} >Shubham's Portfolio</motion.span>
           </div>
           <div className="header_options">
-          <Link activeClass="active" to="first_container" spy={true} smooth={true}>
-            <div
-              className="header_option header_option_separator"
-              onMouseOver={changecolor}
-              onMouseOut={changeback}
-            >
-              <span>Home</span>
-            </div>
-            </Link>
+         
             <Link  to="about_me" spy={true} smooth={true}>
             <div
               className="header_option header_option_separator"
@@ -101,9 +97,12 @@ const FirstContainer = ({scrollResume}) => {
               <motion.h2 variants={titleAnim} > Knack of building applications with front and back end operations.
               </motion.h2>
               <StyledButton>
+              <Link  to="contact_form" spy={true} smooth={true}>
               <button > Hire Me</button>
-
+              </Link>
+              <a download="Resume" href="abc.pdf" >
               <button> Resume</button>
+              </a>
               </StyledButton>
             </div>
             <div className="profile_picture">
@@ -144,6 +143,7 @@ const PortfolioContainer = styled(motion.div)`
   min-height: 100vh;
   align-items: center;
   justify-content: center;
+
   
   
 `

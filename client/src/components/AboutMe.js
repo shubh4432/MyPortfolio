@@ -2,12 +2,9 @@ import React from "react"
 import styled from "styled-components"
 import shubham3 from "../img/shubham3.png"
 import {motion} from 'framer-motion';
-import {PageAnimation} from '../animation';
-import { titleAnim } from "../animation";
-import { useInView } from "react-intersection-observer";
-import { useAnimation } from "framer-motion";
 import {fade} from "../animation"
 import { useScroll } from "./useScroll";
+import {Link} from "react-scroll";
 
 const AboutMe = () => {
     
@@ -26,8 +23,8 @@ const AboutMe = () => {
                  <img src= {shubham3} alt="image doesn't support your browser"/>
                 </AboutMePicture>
                 <AboutMeDetails>
-                    <p> Full stack web and mobile developer with background knowledge of MERN stacks with redux, along with a knack of building applications with utmost efficiency. Strong professional with a BSC willing to be an asset for an organization.</p>
-                    <h1> Here are a few details</h1>
+                    <p>Full stack web and mobile developer with background knowledge of MERN stacks with redux, along with a knack of building applications with utmost efficiency. Strong professional with a BSC willing to be an asset for an organization.</p>
+                    <h1>Here are a few details</h1>
                     <li>Full Stack web and mobile development</li>
                     <li>Interactive Front End as per the design</li>
                     <li>React and React Native</li>
@@ -35,14 +32,18 @@ const AboutMe = () => {
                     <li>Building REST API</li>
                     <li>Managing database</li>
                     <StyledButton>
+                    <Link  to="contact_form" spy={true} smooth={true}>
               <button style={{backgroundColor: "black"}}> Hire Me</button>
-
-              <button style={{backgroundColor: "red"}}> Resume</button>
+        </Link>
+        <a download="Resume" href="abc.pdf" >
+              <button style={{backgroundColor: "orangered"}}> Resume</button>
+              </a>
               </StyledButton>
                 </AboutMeDetails>
               </AboutMeCard>
             </AboutMeContainer>
         </AboutMeParent>
+        
         
     )
 }
