@@ -7,6 +7,7 @@ require("dotenv").config();
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
+app.use(express.static('client/build'))
 
 const transporter = nodemailer.createTransport({
   host: "smtp.gmail.com", //replace with your email provider
