@@ -12,7 +12,7 @@ const AboutMe = () => {
     
     return(
         
-        <AboutMeParent id="about_me" >
+        <AboutMeParent >
             <AboutMeContainer>
               <AboutMeHeading>
                <motion.h2 > ABOUT ME</motion.h2>
@@ -99,7 +99,7 @@ margin-top: 5rem;
  width: 100%;
  box-shadow: 0 0 20px -2px black;
  @media only screen and (max-width:767px) {
-    height: 140vh;
+    height: 80vh;
    
 
  
