@@ -12,7 +12,7 @@ const AboutMe = () => {
     
     return(
         
-        <AboutMeParent >
+        <AboutMeParent id="about_me" variants={fade} animate={controls} initial="hidden" ref= {element} >
             <AboutMeContainer>
               <AboutMeHeading>
                <motion.h2 > ABOUT ME</motion.h2>
@@ -23,7 +23,7 @@ const AboutMe = () => {
                  <img src= {shubham3} alt="image doesn't support your browser"/>
                 </AboutMePicture>
                 <AboutMeDetails>
-                    <p>Full stack web and mobile developer with background knowledge of MERN stacks with redux, along with a knack of building applications with utmost efficiency. Strong professional with a BSC willing to be an asset for an organization.</p>
+                    <p>Full stack web and mobile developer with background knowledge of MERN stacks with redux, along with a knack of building applications with utmost efficiency. Strong professional willing to be an asset for an organization.</p>
                     <h1>Here are a few details</h1>
                     <ul>
                     <li>Full Stack web and mobile development</li>

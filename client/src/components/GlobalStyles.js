@@ -12,16 +12,12 @@ const GlobalStyle = createGlobalStyle`
 body {
     font-family: 'Inter', sa-serif;
     box-sizing: border-box;
-    width: auto;
     overflow-x: hidden;
-    overflow:scroll;
-    -webkit-overflow-scrolling: touch;
 }
 
 html {
     width: auto;
     overflow-x: hidden;
-    overflow-y:scroll;
     @media  (max-width: 1700px) {
         font-size: 75%;
     }
