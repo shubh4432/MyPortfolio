@@ -93,17 +93,19 @@ render ()  {
                   }}
              />
              </StyledTypeWriter>
-            <ContactMeImage>
+            {/* <ContactMeImage> */}
              <ContactDetails>
+               <ul>
               <li>
               <MdCall size="1.8rem" color="cornflowerblue" /> <span>9354377330</span>
               </li>
               <li>
               <MdEmail size="1.8rem" color="cornflowerblue" /> <span>vermashubham1990@gmail.com</span>
               </li>
+              </ul>
              </ContactDetails>
              
-             </ContactMeImage>
+             {/* </ContactMeImage> */}
              </ContactMeText>
              <ContactMeFormParent>
              
@@ -163,6 +165,7 @@ p{
     font-weight: 500;
     letter-spacing: 0.11rem;
 }
+
  
 `
 
@@ -186,6 +189,10 @@ display: flex;
 flex-direction: column;
 justify-content: flex-start;
 width: 50%;
+@media only screen and (max-width: 767px){
+
+  width: 80vw;
+}
    
 `
 
@@ -217,6 +224,8 @@ z-index:2;
  flex-direction: column;
  align-items: center;
  justify-content: center;
+ 
+ font-size: 3vw;
 }
 `
 
@@ -229,8 +238,8 @@ height: 40%;
 color: white;
 
 @media only screen and (max-width:767px) {
-  margin-left: 5rem;
-  font-size: 3.5rem;
+  margin-left: 1rem;
+  font-size: 7vw;
 }
 
 
@@ -243,6 +252,9 @@ align-items: center;
 justify-content: center;
  min-height: 320px;
 width: 50%;
+@media only screen and (max-width: 767px){
+  width: 80vw
+}
 
 `
 
@@ -310,7 +322,7 @@ width: 20%;
  display: flex;
  justify-content: space-evenly;
  @media only screen and (max-width:767px) {
-   width: 40%;
+   width: 60vw;
    justify-content: space-evenly;
  }
 `;
@@ -322,6 +334,9 @@ const ContactDetails = styled.div`
     @media only screen and (max-width:  767px) {
       margin-top: 2rem;
       justify-content: space-evenly;
+      span {
+        
+      }
     }
 `
 

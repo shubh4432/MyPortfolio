@@ -54,7 +54,7 @@ function ResumeContainer() {
   }
 
   return (
-    <Resume variants={fade} animate={controls} initial="hidden" ref= {element}>
+    <Resume >
     <div className="resume_container" id="resume">
       <div className="resume_content">
         <div className="resume_heading">
@@ -155,7 +155,7 @@ function ResumeContainer() {
                     </div>
                   </div>
                   <div className="resume_det_sub_heading">
-                    B.TECH( Electrical and Electronics Engineering)
+                    Senior Secondary Education (CBSE)
                   </div>
                 </div>
               </div>

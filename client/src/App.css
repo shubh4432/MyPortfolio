@@ -71,8 +71,13 @@
   }
 
   .header_logo {
-    margin-left: 7rem;
-    font-size: 250%;
+    /* margin-left: 6rem;
+     */
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5vw;
   }
   .profile_picture {
     margin-bottom: 8px;
@@ -116,6 +121,10 @@
     justify-content: space-evenly;
     align-items: center;
   }
+}
+
+@media only screen and (max-width: 572px) {
+ 
 }
 
 .footer_parent {
@@ -198,12 +207,13 @@ img {
     align-items: center;
   }
   .resume_bullets {
-    width: 50%;
+    width: 80vw;
     height: 50%;
   }
   .resume_bullets_details {
-    width: 50%;
+    width: 80vw;
     height: 50%;
+    padding: 0;
     
   }
 }

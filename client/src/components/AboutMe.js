@@ -12,7 +12,7 @@ const AboutMe = () => {
     
     return(
         
-        <AboutMeParent id="about_me" variants={fade} animate={controls} initial="hidden" ref= {element}>
+        <AboutMeParent id="about_me" >
             <AboutMeContainer>
               <AboutMeHeading>
                <motion.h2 > ABOUT ME</motion.h2>
@@ -68,7 +68,8 @@ const AboutMeContainer = styled.div`
     align-items: center;
     width: 70%;
     @media only screen and (max-width:767px) {
-        width: 70%;
+        width: 70vw;
+       
     }
 `
 
@@ -87,6 +88,10 @@ p{
     font-weight: 400;
     font-size: 20px;
 }
+@media only screen and (max-width:767px) {
+    min-height: content;
+   
+}
 
 `
 
@@ -96,7 +101,10 @@ margin-top: 5rem;
  display: flex;
  width: 100%;
  box-shadow: 0 0 20px -2px black;
-`;
+ 
+`
+
+
 
 const AboutMeDetails  = styled.div`
 width: 50%;
@@ -119,6 +127,14 @@ li {
     width: 100%;
 
 }
+@media only screen and (max-width:557px) {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    
+}
+
 
 
 
@@ -142,6 +158,12 @@ const StyledButton = styled.div`
 margin-top: 2rem;
 display: flex;
 justify-content: flex-start;
+
+@media only screen and (max-width:560px) {
+    display: flex;
+    flex-direction: column;
+    height: 20vw;
+}
 `;
 
 

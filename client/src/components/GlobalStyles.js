@@ -11,11 +11,17 @@ const GlobalStyle = createGlobalStyle`
 
 body {
     font-family: 'Inter', sa-serif;
-    overflow-x: none;
-   
+    box-sizing: border-box;
+    width: auto;
+    overflow-x: hidden;
+    overflow:scroll;
+    -webkit-overflow-scrolling: touch;
 }
 
 html {
+    width: auto;
+    overflow-x: hidden;
+    overflow-y:scroll;
     @media  (max-width: 1700px) {
         font-size: 75%;
     }
@@ -37,9 +43,16 @@ button {
     font-family: 'Inter', sa-serif;
     &:hover{
         background-color: orange;
-        color: white
+        color: white;
     }
-    
+    @media only screen and (max-width:767px) {
+    display: flex;
+    justify-content: center;
+    font-size: 2vw;
+    height: 5vh;
+    width: 30vw;
+    align-items: center;
+    }
 }
 
 h1 {
