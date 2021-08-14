@@ -88,10 +88,7 @@ p{
     font-weight: 400;
     font-size: 20px;
 }
-@media only screen and (max-width:767px) {
-    min-height: content;
-   
-}
+
 
 `
 
@@ -101,6 +98,10 @@ margin-top: 5rem;
  display: flex;
  width: 100%;
  box-shadow: 0 0 20px -2px black;
+ @media only screen and (max-width:767px) {
+    height: 140vh;
+   
+
  
 `
 
