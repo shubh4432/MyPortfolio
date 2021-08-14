@@ -17,6 +17,7 @@
     "express": "^4.16.4",
     "nodemailer": "^6.6.3",
     "nodemon": "^2.0.12",
+    "path": "^0.12.7",
     "stripe": "6.28.0"
   },
   "devDependencies": {
@@ -26,6 +27,3 @@
     "node": "12.18.1"
   }
 }
-
-
-
