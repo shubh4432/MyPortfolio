@@ -24,6 +24,6 @@
     "concurrently": "^4.0.1"
   },
   "engines": {
-    "node": "12.18.1"
+    "node": "^18.15.0"
   }
 }
